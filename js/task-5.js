@@ -4,6 +4,9 @@ const students = [
     { name: "Ківі", courses: ["фізика", "біологія"] },
   ];
   
-  students.flatMap(student => student.courses);
-  console.log(students)
+  const array = students.flatMap(student => student.courses);
+  console.log(array)
+
+const array2 = students.reduce((acc, student) => acc.concat(student.courses), []);
+console.log(array2)
   // ['математика', 'фізика', 'інформатика', 'математика', 'фізика', 'біологія']; 
